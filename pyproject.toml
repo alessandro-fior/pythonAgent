@@ -1,0 +1,41 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "python-modern-evolution"
+version = "0.1.0"
+description = "Documentazione eseguibile dell'evoluzione di Python, da Python 2 a oggi"
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+keywords = ["python", "documentation", "migration", "changelog", "teaching"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Education",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: 3.14",
+    "Topic :: Documentation",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
+dependencies = []
+
+[project.urls]
+Documentation = "https://docs.python.org/3/whatsnew/index.html"
+Release = "https://devguide.python.org/versions/"
+
+[project.scripts]
+pme = "pme.cli:main"
+
+[tool.setuptools]
+packages = ["pme"]
+
+[tool.setuptools.package-data]
+pme = ["py.typed"]
